@@ -19,6 +19,10 @@ public class CommentService {
     //注入dao
     @Autowired
     private CommentRepository commentRepository;
+    //注入MongoTemplate
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
 
     /**
      * 保存一个评论
@@ -82,9 +86,6 @@ public class CommentService {
     }
 
 
-    //注入MongoTemplate
-    @Autowired
-    private MongoTemplate mongoTemplate;
 
     /**
      * 点赞数+1
